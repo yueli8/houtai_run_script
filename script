@@ -42,9 +42,7 @@ drwxrwxr-x 2 liyue liyue    4096 12月  9 19:39 TRain.egg-info
 drwxrwxr-x 3 liyue liyue    4096 12月 11 15:15 util
 -rw-rw-r-- 1 liyue liyue       0 12月  9 10:13  
 (base) [liyue@master 7.TRain-main]$ ^C
-(base) [liyue@master 7.TRain-main]$ ^C
-(base) [liyue@master 7.TRain-main]$ ^C
-(base) [liyue@master 7.TRain-main]$ ^C
+
 (base) [liyue@master 7.TRain-main]$ ^C
 (base) [liyue@master 7.TRain-main]$ cd tr04dock/OS_Dock/
 (base) [liyue@master OS_Dock]$ cat >run.sh
