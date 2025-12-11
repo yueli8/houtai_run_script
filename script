@@ -1,0 +1,142 @@
+Last login: Thu Dec 11 15:41:31 on ttys002
+yl@localhost ~ % liyue@192.168.18.50
+zsh: command not found: liyue@192.168.18.50
+yl@localhost ~ % ssh liyue@192.168.18.50
+liyue@192.168.18.50's password: 
+Last login: Thu Dec 11 15:41:47 2025 from 192.168.3.219
+(base) [liyue@master ~]$ cd work
+-bash: cd: work: 没有那个文件或目录
+(base) [liyue@master ~]$ cd .
+(base) [liyue@master ~]$ 
+(base) [liyue@master ~]$ cd ..
+(base) [liyue@master home]$ l
+bash: l: 未找到命令...
+(base) [liyue@master home]$ sls
+bash: sls: 未找到命令...
+(base) [liyue@master home]$ ls
+backup  liyue
+(base) [liyue@master home]$ cd ..
+(base) [liyue@master /]$ ls
+app   data  gpfs   lib         media  opt      root  srv  usr
+bin   dev   home   lib64       mnt    proc     run   sys  var
+boot  etc   homes  lost+found  nfs    project  sbin  tmp  work
+(base) [liyue@master /]$ cd work/liyue/
+(base) [liyue@master liyue]$ ls
+0.download_data                      5.rosetta
+10.rosetta_src_2021.16.61629_bundle  6.P-TEAM
+11.TRain-main                        7.TRain-main
+12.tfold-master                      8.rosetta_bin_linux_2021.16.61629_bundle
+1.alphafold_multimer                 9.localcolabfold-1.5.5
+2.calitas                            fake_home
+3.miniconda3                         tfold-master.zip
+4.database_software
+(base) [liyue@master liyue]$ cd 7.TRain-main/
+(base) [liyue@master 7.TRain-main]$ ll
+总用量 12169
+drwxrwxr-x 4 liyue liyue    4096 12月  7 16:32 build
+-rw-rw-r-- 1 liyue liyue    5340 11月 17 2024 case-study.csv
+drwxrwxr-x 3 liyue liyue    4096 12月 11 12:25 data
+-rw-rw-r-- 1 liyue liyue 6226539 11月 17 2024 Figure3_TRain_Full_6x.png
+drwxrwxr-x 2 liyue liyue    4096 11月 17 2024 images
+-rw-rw-r-- 1 liyue liyue   35149 11月 17 2024 LICENSE
+-rw-rw-r-- 1 liyue liyue      64 11月 17 2024 Manifest.in
+drwxrwxr-x 2 liyue liyue    4096 12月  8 15:35 Modeled
+drwxrwxr-x 2 liyue liyue    4096 11月 17 2024 Other_Tools
+-rw-rw-r-- 1 liyue liyue    8548 11月 17 2024 README.md
+-rw-rw-r-- 1 liyue liyue     241 11月 17 2024 requirements.txt
+drwxrwxr-x 3 liyue liyue    4096 12月  8 23:08 run_quickstart
+-rw-rw-r-- 1 liyue liyue    1354 12月  7 16:31 setup.py
+-rw-rw-r-- 1 liyue liyue     635 12月  8 14:17 Test_Table_Single_Results.csv
+drwxrwxr-x 5 liyue liyue    4096 12月 11 12:25 tr01input
+drwxrwxr-x 6 liyue liyue    4096 12月  8 23:33 tr02model
+drwxrwxr-x 6 liyue liyue    4096 12月 11 15:26 tr03pair
+drwxrwxr-x 7 liyue liyue    4096 12月 11 16:17 tr04dock
+drwxrwxr-x 4 liyue liyue    4096 11月 17 2024 tr05analysis
+drwxrwxr-x 2 liyue liyue    4096 12月  9 19:39 TRain.egg-info
+-rw-rw-r-- 1 liyue liyue 5921596 11月 17 2024 TRain_Manual.pdf
+drwxrwxr-x 3 liyue liyue    4096 12月 11 15:15 util
+-rw-rw-r-- 1 liyue liyue       0 12月  9 10:13  
+(base) [liyue@master 7.TRain-main]$ ^C
+(base) [liyue@master 7.TRain-main]$ ^C
+(base) [liyue@master 7.TRain-main]$ ^C
+(base) [liyue@master 7.TRain-main]$ ^C
+(base) [liyue@master 7.TRain-main]$ ^C
+(base) [liyue@master 7.TRain-main]$ cd tr04dock/OS_Dock/
+(base) [liyue@master OS_Dock]$ cat >run.sh
+TCRcoupler 0_5isz.pdb -q -r -a 10 -d 100 -e 10
+^C
+(base) [liyue@master OS_Dock]$ cat run.sh 
+TCRcoupler 0_5isz.pdb -q -r -a 10 -d 100 -e 10
+(base) [liyue@master OS_Dock]$ nohuo sh run.sh &
+[1] 47509
+(base) [liyue@master OS_Dock]$ bash: nohuo: 未找到命令...
+
+[1]+  退出 127              nohuo sh run.sh
+(base) [liyue@master OS_Dock]$ nohup sh run.sh &
+[1] 47525
+(base) [liyue@master OS_Dock]$ nohup: 忽略输入并把输出追加到"nohup.out"
+
+(base) [liyue@master OS_Dock]$ jobs
+[1]+  退出 1                nohup sh run.sh
+(base) [liyue@master OS_Dock]$ cat nohup.out 
+/work/liyue/10.rosetta_src_2021.16.61629_bundle/
+Running relax...
+Traceback (most recent call last):
+  File "/home/liyue/miniconda3/bin/TCRcoupler", line 33, in <module>
+    sys.exit(load_entry_point('TRain', 'console_scripts', 'TCRcoupler')())
+  File "/work/liyue/7.TRain-main/tr04dock/__init__.py", line 6, in main
+    TCRcoupler.main()
+  File "/work/liyue/7.TRain-main/tr04dock/TCRcoupler.py", line 1678, in main
+    run_rigid(args.pdb, run_info, args.native)
+  File "/work/liyue/7.TRain-main/tr04dock/TCRcoupler.py", line 234, in run_rigid
+    make_dirs()
+  File "/work/liyue/7.TRain-main/tr04dock/TCRcoupler.py", line 273, in make_dirs
+    os.mkdir(program_dir + "/output_files/")
+FileExistsError: [Errno 17] File exists: '/work/liyue/7.TRain-main/tr04dock/OS_Dock/output_files/'
+(base) [liyue@master OS_Dock]$ pwd
+/work/liyue/7.TRain-main/tr04dock/OS_Dock
+(base) [liyue@master OS_Dock]$ ls
+0_5isz.pdb  flag_input_relax  nohup.out  output_files  run.sh
+(base) [liyue@master OS_Dock]$ rm -r output_files/
+(base) [liyue@master OS_Dock]$ rm -r output_files/^C
+(base) [liyue@master OS_Dock]$ rm nohup.out 
+(base) [liyue@master OS_Dock]$ nohup sh run.sh &
+[1] 47891
+(base) [liyue@master OS_Dock]$ nohup: 忽略输入并把输出追加到"nohup.out"
+
+(base) [liyue@master OS_Dock]$ jobs
+[1]+  运行中               nohup sh run.sh &
+(base) [liyue@master OS_Dock]$ ll
+总用量 514
+-rw-rw-r-- 1 liyue liyue 512924 12月 11 15:47 0_5isz.pdb
+-rw-rw-r-- 1 liyue liyue    213 12月 11 16:53 flag_input_relax
+-rw------- 1 liyue liyue      0 12月 11 16:53 nohup.out
+drwxrwxr-x 5 liyue liyue   4096 12月 11 16:53 output_files
+-rw-rw-r-- 1 liyue liyue     47 12月 11 16:51 run.sh
+(base) [liyue@master OS_Dock]$ jobs
+[1]+  运行中               nohup sh run.sh &
+(base) [liyue@master OS_Dock]$ ps -x|cat
+  PID TTY      STAT   TIME COMMAND
+ 4427 ?        S      0:01 sshd: liyue@pts/7
+ 4428 pts/7    Ss+    0:00 -bash
+ 5835 pts/7    T      0:00 sh setup_database.sh
+ 5837 pts/7    T      0:06 curl -L -o uniref30_2302.tar.gz https://wwwuser.gwdg.de/~compbiol/colabfold/uniref30_2302.tar.gz
+23609 ?        S      0:00 sshd: liyue@pts/8
+23610 pts/8    Ss+    0:00 -bash
+30892 pts/8    T      0:00 /home/liyue/miniconda3/bin/python /home/liyue/miniconda3/bin/ModelEngine -a Sample_Input/Quick_Start/alpha_single.fasta -b Sample_Input/Quick_Start/beta_single.fasta
+30893 pts/8    T      0:04 /work/liyue/10.rosetta_src_2021.16.61629_bundle/main/source/bin/tcrmodel.linuxgccrelease -alpha SQKIEQNSEALNIQEGKTATLTCNYTNYSPAYLQWYRQDPGRGPVFLLLIRENEKEKRKERLKVTFDTTLKQSLFHITASQPADSATYLCALDKGGGSQGNLIFGKGTKLSVKPIQNPDPAVYQLRDSKSSDKSVCLFTDFDSQTNVSQSKDSDVYITDKTVLDMRSMDFKSNSAVAWSNKSDFACANAFNNSIIPEDTFFPSP -beta DGGITQSPKYLFRKEGQNVTLSCEQNLNHDAMYWYRQDPGQGLRLIYYSQIVNDFQKGDIAEGYSVSREKKESFPLTVTSAQKNPTAFYLCASSTRSTDTQYFGPGTRLTVLEDLNKVFPPEVAVFEPSEAEISHTQKATLVCLATGFFPDHVELSWWVNGKEVHSGVSTDPQPLKEQPALNDSRYCLSSRLRVSATFWQNPRNHFRCQVQFYGLSENDEWTQDRAKPVTQIVSAEAWGRA -out::prefix tmp0_
+46982 ?        S      0:00 sshd: liyue@pts/4
+46983 pts/4    Ss     0:00 -bash
+47891 pts/4    S      0:00 sh run.sh
+47892 pts/4    S      0:14 /home/liyue/miniconda3/bin/python /home/liyue/miniconda3/bin/TCRcoupler 0_5isz.pdb -q -r -a 10 -d 100 -e 10
+48021 pts/4    R      0:22 /work/liyue/10.rosetta_src_2021.16.61629_bundle/main/source/bin/relax.default.linuxgccrelease @flag_input_relax
+48070 pts/4    R+     0:00 ps -x
+48071 pts/4    S+     0:00 cat
+(base) [liyue@master OS_Dock]$ ll
+总用量 514
+-rw-rw-r-- 1 liyue liyue 512924 12月 11 15:47 0_5isz.pdb
+-rw-rw-r-- 1 liyue liyue    213 12月 11 16:53 flag_input_relax
+-rw------- 1 liyue liyue      0 12月 11 16:53 nohup.out
+drwxrwxr-x 5 liyue liyue   4096 12月 11 16:53 output_files
+-rw-rw-r-- 1 liyue liyue     47 12月 11 16:51 run.sh
+(base) [liyue@master OS_Dock]$ 
