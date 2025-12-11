@@ -4,22 +4,7 @@ zsh: command not found: liyue@192.168.18.50
 yl@localhost ~ % ssh liyue@192.168.18.50
 liyue@192.168.18.50's password: 
 Last login: Thu Dec 11 15:41:47 2025 from 192.168.3.219
-(base) [liyue@master ~]$ cd work
--bash: cd: work: 没有那个文件或目录
-(base) [liyue@master ~]$ cd .
-(base) [liyue@master ~]$ 
-(base) [liyue@master ~]$ cd ..
-(base) [liyue@master home]$ l
-bash: l: 未找到命令...
-(base) [liyue@master home]$ sls
-bash: sls: 未找到命令...
-(base) [liyue@master home]$ ls
-backup  liyue
-(base) [liyue@master home]$ cd ..
-(base) [liyue@master /]$ ls
-app   data  gpfs   lib         media  opt      root  srv  usr
-bin   dev   home   lib64       mnt    proc     run   sys  var
-boot  etc   homes  lost+found  nfs    project  sbin  tmp  work
+
 (base) [liyue@master /]$ cd work/liyue/
 (base) [liyue@master liyue]$ ls
 0.download_data                      5.rosetta
