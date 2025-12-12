@@ -1,20 +1,4 @@
-Last login: Thu Dec 11 15:41:31 on ttys002
-yl@localhost ~ % liyue@192.168.18.50
-zsh: command not found: liyue@192.168.18.50
-yl@localhost ~ % ssh liyue@192.168.18.50
-liyue@192.168.18.50's password: 
-Last login: Thu Dec 11 15:41:47 2025 from 192.168.3.219
 
-(base) [liyue@master /]$ cd work/liyue/
-(base) [liyue@master liyue]$ ls
-0.download_data                      5.rosetta
-10.rosetta_src_2021.16.61629_bundle  6.P-TEAM
-11.TRain-main                        7.TRain-main
-12.tfold-master                      8.rosetta_bin_linux_2021.16.61629_bundle
-1.alphafold_multimer                 9.localcolabfold-1.5.5
-2.calitas                            fake_home
-3.miniconda3                         tfold-master.zip
-4.database_software
 (base) [liyue@master liyue]$ cd 7.TRain-main/
 (base) [liyue@master 7.TRain-main]$ ll
 总用量 12169
